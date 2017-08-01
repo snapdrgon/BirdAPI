@@ -35,14 +35,17 @@ namespace BirdAPI.Controllers
         }
 
         // GET api/values
-        public IEnumerable<BirdObserverDto> Get()
+        public IEnumerable<BirdObserverDto> Put(CoordinatesDto coordinates)
         {
+            
             string json = "";
             try
             {
                 using (WebClient wc = new WebClient())
                 {
-                    json = wc.DownloadString("http://ebird.org/ws1.1/data/obs/geo/recent?lng=-105.12&lat=39.94&fmt=json");
+                    string url = String.Format("http://ebird.org/ws1.1/data/obs/geo/recent?lng={0}&lat={1}&fmt=json",
+                        coordinates.longitude.ToString(), coordinates.latitude.ToString());
+                    json = wc.DownloadString(url);
                     JArray birdObserverArray = JArray.Parse(json);
                     IList<BirdObserverDto> birdObserverDto = new List<BirdObserverDto>();
                     try {

@@ -209,6 +209,7 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Dto\BirdBreedDto.cs" />
     <Compile Include="Dto\BirdObserverDto.cs" />
+    <Compile Include="Dto\CoordinatesDto.cs" />
     <Compile Include="IApplicationDbContext.cs" />
     <Compile Include="Migrations\201707122339425_InitialBirdBreedsAndBirdObserversTablesAdded.cs" />
     <Compile Include="Migrations\201707122339425_InitialBirdBreedsAndBirdObserversTablesAdded.Designer.cs">
