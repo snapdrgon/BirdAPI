@@ -55,7 +55,9 @@ namespace BirdAPI.Controllers
                         ScientificName = (string)bo["sciName"],
                         Location = (string)bo["locName"],                     
                         NumberSpotted = ConvertToInt((string)bo["howMany"]),
-                        DateObserved = (DateTime)bo["obsDt"]
+                        DateObserved = (DateTime)bo["obsDt"],
+                        Latitude = (double)bo["lat"],
+                        Longitude = (double)bo["lng"]
                     }).ToList();
                     
                     foreach (BirdObserver bo in birdObservers)

@@ -12,5 +12,7 @@ namespace BirdAPI.Dto
         public string Name { get; set; }
         public string ScientificName { get; set; }
         public DateTime DateObserved { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }

@@ -11,5 +11,7 @@ namespace BirdAPI.Persistence.Respositores
         string Name { get; set; }
         int NumberSpotted { get; set; }
         string ScientificName { get; set; }
+        double Latitude { get; set; }
+        double Longitude { get; set; }
     }
 }
